@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto Slab', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #00c0d1;
+}
+.c{
+    position: relative;
+}
+.c .navigation{
+    position: relative;
+    width: 80px;
+    height: 420px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: -8px 7px 10px rgba(0, 0, 0, 0.445);
+    transition: 0.7s;
+    border: 1px #0000006e solid;
+} 
+.c .navigation.active{
+    width: 300px;
+}  
+.c .navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.c .navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+.c .navigation ul li:hover{
+    background: #3f3f3f28;
+}
+.c .navigation ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:#000;
+    font-weight: 600;
+    font-size: 19px;
+}
+.c .navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 80px;
+    height: 60px;
+    text-align: center;
+}
+.c .navigation ul li .icon .fa{
+    font-size: 24px;
+    line-height: 60px;
+}
+.c .navigation ul li a .titulo{
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+.toggle{
+    position: absolute;
+    top: calc(50% - 20px);
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    cursor: pointer;
+    border: 5px solid #00c0d1;
+    border-radius: 50%;
+}
+.toggle::before{
+    content: '\f054';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    left: 1.5px;
+    font-size: 16px;
+    color: #00c0d1;
+    transition: 0.5s;
+}
+.toggle.active::before{
+    transform: rotate(180deg);
+    text-align: center;
+    left: -1.5px;
+}
